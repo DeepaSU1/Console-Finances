@@ -89,12 +89,7 @@ var finances = [
 
 console.log('Financial Analysis');
 console.log('-----------------------------');
-var total = 0;
 
-for (var i = 0; i < finances.length; i++) {
-    total += finances[i][1];
-}
-console.log("Total :  $" + total);
 
 var totalMonths = finances.length;
 
@@ -102,6 +97,12 @@ while (totalMonths < finances.length) {
     totalMonths++;
 }
 console.log("Total Months : " + finances.length);
+
+var total = 0;
+for (var i = 0; i < finances.length; i++) {
+    total += finances[i][1];
+}
+console.log("Total :  $" + total);
 
 var maxvar = 0;
 var Diffaverage = 0;
@@ -111,6 +112,9 @@ var MaxDifferent = 0;
 var MinDifferent = 0;
 var SavePrevious = 0;
 var minvar = 0;
+var maxMonth = "Month";
+var minMonth = "Month";
+
 for (var i = 0; i < finances.length; i++) {
     if (i === 0) {
         CurrentDifferent = finances[i][1];
@@ -125,22 +129,24 @@ for (var i = 0; i < finances.length; i++) {
     if (finances[i][1] > maxvar) {
         maxvar = finances[i][1];
         MaxDifferent = CurrentDifferent;
+        maxMonth = finances[i][0];
     }
     else  if (finances[i][1] < minvar) {
         minvar = finances[i][1];
         MinDifferent = CurrentDifferent;
+        minMonth = finances[i][0];
     }
     //console.log("Month :  " + finances[i][0] + " Difference :  " + CurrentDifferent + " TotalDifference :"+ TotalDifferent);
 }
 
 Diffaverage = TotalDifferent / totalMonths;
-console.log("PL Amount Average Change :  " + Diffaverage);
+console.log("Average Change :  " + Diffaverage);
 
 //console.log('Greatest Profits: Feb-2012' + "  " + maxvar);
-console.log('Greatest Increase in Profits: Feb-2012' + "  " + '($' + MaxDifferent + ')');
+console.log('Greatest Increase in Profits: ' + maxMonth + "  " + '($' + MaxDifferent + ')');
 
 
-console.log('Greatest Decrease in Profits: Sep-2013' + ' ' + '($' +MinDifferent + ')');
+console.log('Greatest Decrease in Profits: ' + minMonth +  ' ' + '($' + MinDifferent + ')');
 
 
 
