@@ -87,10 +87,11 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
+//title
 console.log('Financial Analysis');
 console.log('-----------------------------');
 
-
+// total months
 var totalMonths = finances.length;
 
 while (totalMonths < finances.length) {
@@ -98,12 +99,15 @@ while (totalMonths < finances.length) {
 }
 console.log("Total Months : " + finances.length);
 
+
+// total profit
 var total = 0;
 for (var i = 0; i < finances.length; i++) {
     total += finances[i][1];
 }
 console.log("Total :  $" + total);
 
+//Average
 var maxvar = 0;
 var Diffaverage = 0;
 var CurrentDifferent = 0;
@@ -126,6 +130,7 @@ for (var i = 0; i < finances.length; i++) {
         SavePrevious = finances[i][1];
     }
 
+    //greatest increase in profits & greatest decrease in losses
     if (finances[i][1] > maxvar) {
         maxvar = finances[i][1];
         MaxDifferent = CurrentDifferent;
@@ -139,13 +144,15 @@ for (var i = 0; i < finances.length; i++) {
     //console.log("Month :  " + finances[i][0] + " Difference :  " + CurrentDifferent + " TotalDifference :"+ TotalDifferent);
 }
 
+//Average
 Diffaverage = TotalDifferent / totalMonths;
 console.log("Average Change :  " + Diffaverage);
 
 //console.log('Greatest Profits: Feb-2012' + "  " + maxvar);
+//greatest increase in profits
 console.log('Greatest Increase in Profits: ' + maxMonth + "  " + '($' + MaxDifferent + ')');
 
-
+//greatest decrease in losses
 console.log('Greatest Decrease in Profits: ' + minMonth +  ' ' + '($' + MinDifferent + ')');
 
 
