@@ -15,6 +15,10 @@ N/A
 
 To use this web page, navigate to the above site using chrome browser.
 
+https://deepasu1.github.io/Console-Finances/ 
+
+https://github.com/DeepaSU1/Console-Finances
+
 ### User Story
 
 Your task is to write JavaScript code that analyzes the records to calculate each of the following:
