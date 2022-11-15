@@ -19,6 +19,8 @@ https://deepasu1.github.io/Console-Finances/
 
 https://github.com/DeepaSU1/Console-Finances
 
+https://github.com/DeepaSU1/Console-Finances/blob/main/index.js
+
 ### User Story
 
 Your task is to write JavaScript code that analyzes the records to calculate each of the following:
